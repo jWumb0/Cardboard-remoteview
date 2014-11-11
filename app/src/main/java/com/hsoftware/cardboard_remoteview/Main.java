@@ -1,9 +1,11 @@
 package com.hsoftware.cardboard_remoteview;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class Main extends Activity {
@@ -32,5 +34,10 @@ public class Main extends Activity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void btn_click(View view) {
+        Intent intent = new Intent(this, screen.class);
+        startActivity(intent);
     }
 }
